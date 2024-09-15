@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -9,6 +9,12 @@ const Home = () => {
   const navigate=useNavigate();
   const{currentUser}=useContext(AuthContext);
   console.log(currentUser)
+
+  useEffect(()=>{
+    if(!currentUser){
+      navigate('/login');
+    }
+  },[currentUser]);
   if(!currentUser){
     navigate("/login");
   }
