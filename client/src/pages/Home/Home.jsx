@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+
 
 const Home = () => {
+
+  const navigate=useNavigate();
+  const{currentUser}=useContext(AuthContext);
+  console.log(currentUser)
+  if(!currentUser){
+    navigate("/login");
+  }
 
   return (
     <div className="home">
