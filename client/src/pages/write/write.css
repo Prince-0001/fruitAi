@@ -1,0 +1,108 @@
+.write{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding:20px;
+    .container{
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        border:3px dashed  #7B61FF;
+        gap:20px;
+        div{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            width: 100%;
+            label{
+                
+                font-family: Poppins;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0.05em;
+                color:#C571F8;
+                cursor: pointer;
+
+
+            }
+            input{
+                box-sizing: border-box;
+                width: 100%;
+                border-radius: 5px ;
+                opacity: 0px;
+                background-color:  #EDEDED;
+                padding:6px 10px;
+                border:none;
+                color: #555;;
+                font-family: Poppins;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: left;
+            }
+        }
+        .img{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .upload-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap:30px;
+            }
+            .upload{
+                display: flex;
+            
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100px;
+                border:20px;
+                background-color: #EDEDED;
+                img{
+                    height: 25px;
+                    width: 25px;
+                    
+                }
+
+            }
+            
+        }
+        .content{
+            textarea{
+                height: 200px;
+                padding: 10px;
+                background-color:#EDEDED ;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+        .button{
+            
+            margin:auto;
+            .btn{
+                border:none;
+                padding:10px 5px;
+                border-radius:10px;
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                text-align: center;
+                color:white;
+                background-color: #C571F8;
+                cursor: pointer;
+
+
+            }
+        }
+       
+    }
+}
