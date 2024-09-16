@@ -7,7 +7,7 @@ const Navbar = () => {
     const {logout,currentUser}=useContext(AuthContext);
   return (
     <div className='navbar'>
-        <p>Welcome, {currentUser.username}</p>
+        <p>Welcome, {currentUser?.username}</p>
       <button className='button' onClick={logout}>Logout</button>
     </div>
   )
