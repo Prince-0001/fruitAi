@@ -10,6 +10,7 @@ import About from './pages/About/About.jsx';
 import FAQ from './pages/FAQ/FAQ.jsx';
 import { AuthContextProvider } from './context/AuthContext.jsx';
 import Write from './pages/write/Write.jsx';
+import HomeLayout from './Layout/HomeLayout.jsx';
 
 const router= createBrowserRouter([
   // {
@@ -31,7 +32,13 @@ const router= createBrowserRouter([
       },
       {
         path:'/',
-        element:<Home/>
+        element:<HomeLayout/>,
+        children:[
+          {
+            path:'/',
+            element:<Home/>
+          }
+        ]
       },
       {
         path:'/about',

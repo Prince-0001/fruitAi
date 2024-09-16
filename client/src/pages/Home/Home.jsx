@@ -8,16 +8,13 @@ const Home = () => {
 
   const navigate=useNavigate();
   const{currentUser}=useContext(AuthContext);
-  console.log(currentUser)
+
 
   useEffect(()=>{
     if(!currentUser){
       navigate('/login');
     }
   },[currentUser]);
-  if(!currentUser){
-    navigate("/login");
-  }
 
   return (
     <div className="home">
